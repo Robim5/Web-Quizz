@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+    background-color: #052659;
+    overflow-y: hidden;
+    overflow: hidden;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.gerale {
+    text-align: center;
+    width: 400px;
+    height: 550px;
+    background-color: #c1e8ff;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    border: 2px solid #021024;
+    box-shadow: 8px 3px 6px 3px #021024;
+    box-sizing: border-box;
+}
+
+
+
+#logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    border: 2px solid #021024;
+    margin-top: 30px;
+    box-shadow: 3px 3px 3px 3px #021024;
+    margin-bottom: 20px;
+}
+
+.welcome{
+    font-size: 37px;
+    cursor: default;
+    background: linear-gradient(to right, #c1e8ff 20%, #7da0ca 40%, #5483b3 60%, #052659 80%, #021024 100%);
+    background-size: 200% auto;
+    color: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+}
+
+#subtitle{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#playone, #createone {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#createone::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+#createone:hover::before {
+    width: 0;
+    height: 0;
+}
+
+#createone:hover {
+    transform: scale(1.1);
+}
+
+#playone::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+#playone:hover::before {
+    width: 0;
+    height: 0;
+}
+
+#playone:hover {
+    transform: scale(1.1);
+}
+
+.wanttoplay{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;    
+
+}
+
+#genshin, #robim, #anime {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    width: 300px;
+    height: 70px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: grid;
+    justify-content: space-between;
+}
+  
+#genshin::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#genshin:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+#genshin:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+#robim::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#robim:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+#robim:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+#anime::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+#anime:hover::before{
+    width: 300%;
+    height: 300%;
+}
+
+#anime:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+
+
+#question1, #question2, #question3, #question4, #question5 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/*Genshin*/
+
+
+
+.genshinpa{
+    text-align: center;
+    width: 350px;
+    height: 480px;
+    background-color: #4a4150;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    color:white;
+    border: 2px solid #000000;
+    box-shadow: 8px 3px 6px 3px #000000;
+    box-sizing: border-box;
+    padding: 35px 55px ;
+}
+
+
+
+.genshinpa #answer1, .genshinpa #answer2, .genshinpa #answer3, .genshinpa #answer4 {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    color: #492011;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #d9803a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.genshinpa #answer1:hover, .genshinpa #answer2:hover, .genshinpa #answer3:hover, .genshinpa #answer4:hover {
+    background-color: #8b5846;
+    color: #a97ab2;
+}
+
+/*anime*/
+
+.animepa {
+    text-align: center;
+    width: 390px;
+    height: 480px;
+    background-color: #4a0730;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    color:white;
+    border: 2px solid #000000;
+    box-shadow: 8px 3px 6px 3px #000000;
+    box-sizing: border-box;
+    padding: 35px 55px ;
+}
+
+.animepa #answer1, .animepa #answer2, .animepa #answer3, .animepa #answer4 {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 240px;
+    height: 50px;
+    font-weight: bold;
+    color: #7a0c31;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #cd1a30;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animepa #answer1:hover, .animepa #answer2:hover, .animepa #answer3:hover, .animepa #answer4:hover {
+    background-color: #fe8932;
+    color: #fee7b5;
+}
+
+/*robim*/
+
+
+
+.robimpa {
+    text-align: center;
+    width: 390px;
+    height: 480px;
+    background-color: #5e7343;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    color:white;
+    border: 2px solid #000000;
+    box-shadow: 8px 3px 6px 3px #000000;
+    box-sizing: border-box;
+    padding: 50px 55px;
+}
+
+.robimpa #answer1, .robimpa #answer2, .robimpa #answer3, .robimpa #answer4 {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 290px;
+    height: 50px;
+    font-weight: bold;
+    color: #80a416;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #08652c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.robimpa #answer1:hover, .robimpa #answer2:hover, .robimpa #answer3:hover, .robimpa #answer4:hover {
+    background-color: #ad9f3c;
+    color: #c5c764;
+}
+
+
+
+/*the end*/
+
+.theend {
+    text-align: center;
+    background-color: #eeedeb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.theend p {
+    font-size: 18px;
+    color: #333;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.Reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0ccbe;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Reset:hover {
+    background-color: #3c3633;
+    color: white;
+}
+
+/*soon*/
+
+.comming_soon {
+    text-align: center;
+    width: 290px;
+    height: 280px;
+    background-color: #7a92a9;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    color:white;
+    border: 2px solid #0c111b;
+    box-shadow: 8px 3px 6px 3px #556a87;
+    box-sizing: border-box;
+    padding: 50px 20px;
+}
+
+#soon {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40px;
+    letter-spacing: 1.6px;
+    word-spacing: 1.4px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+}
+
+
+.comming_soon #Reset {
+	box-shadow: 3px 5px 0px 0px #899599;
+	background:linear-gradient(to bottom, #7a92a9 5%, #39455b 100%);
+	background-color:#ededed;
+	border-radius:22px;
+	border:2px solid #0c111b;
+	display:inline-block;
+	cursor:pointer;
+	color:#0c111b;
+	font-family:Georgia;
+	font-size:20px;
+	font-weight:bold;
+	padding:8px 24px;
+	text-decoration:none;
+	text-shadow:0px 2px 2px #7a92a9;
+    padding: -10px -20px;
+}
+.comming_soon #Reset:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.comming_soon #Reset:active {
+	position:relative;
+	top:1px;
+}
